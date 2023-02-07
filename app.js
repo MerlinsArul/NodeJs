@@ -41,4 +41,8 @@ const server = http.createServer((req, res) => {
     res.end();
 })
 
-server.listen(3000);
+var myLogModule = require('./log.js');
+
+myLogModule.info('Node.js started');
+
+server.listen(8000);
