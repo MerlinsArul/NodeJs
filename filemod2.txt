@@ -1,0 +1,2 @@
+Hello this is example for fs module
+Hello this is example for fs module
