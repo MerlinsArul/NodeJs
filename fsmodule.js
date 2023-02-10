@@ -1,4 +1,5 @@
-const fs = require("fs")
+const fs = require("fs");
+const { Server } = require("http");
 
 console.log("First");
 const fileContent = fs.readFileSync("./filemod.txt","utf-8")
@@ -23,4 +24,3 @@ fs.writeFile("./greet.txt","Hello Everyone\n",{flag:"a"},(err)=>{
         console.log("File is written as async function");
     }
 })
-//fs.appendFileSync("./greet.txt","Here we may see the example for append\n")
