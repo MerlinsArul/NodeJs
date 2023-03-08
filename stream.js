@@ -13,6 +13,21 @@ readablestream.on("data",(chunck)=>{
 })
 
 
-// using pipe
-
-readablestream.pipe(writablesteam);
+const { Readable } = require('stream');
+  
+// Reading the data 
+const inStream = new Readable({
+    read() { }
+});
+  
+// Pushing the data to the stream
+inStream.push('Angular: ');
+inStream.push(
+    'Angular is used as Frontend');
+  
+// Indicates that no more data is
+// left in the stream
+inStream.push(null);
+  
+// Echoing data to the standard output
+inStream.pipe(process.stdout);
