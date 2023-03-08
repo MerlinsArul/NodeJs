@@ -7,9 +7,9 @@ const writablesteam = fs.createWriteStream("./filemod2.txt");
 
 // using stream
 
-readablestream.on("data",(chunck)=>{
-    console.log(chunck);
-    writablesteam.write(chunck);
+readablestream.on("data",(file)=>{
+    console.log(file);
+    writablesteam.write(file);
 })
 
 
