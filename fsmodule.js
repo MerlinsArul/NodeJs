@@ -24,3 +24,5 @@ fs.writeFile("./greet.txt","Hello Everyone\n",{flag:"a"},(err)=>{
         console.log("File is written as async function");
     }
 })
+
+
